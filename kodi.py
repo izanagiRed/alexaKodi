@@ -237,15 +237,6 @@ def PageDown():
 
 def ToggleWatched():
   return SendCommand(RPCString("Input.ExecuteAction", {"action":"togglewatched"}))
-
-def Info():
-  return SendCommand(RPCString("Input.Info"))
-
-def DisplayInfo():
-  return SendCommand(RPCString("Input.I"))  
-  
-def MarkWatch():
-  return SendCommand(RPCString("Input.W"))  
   
 def Menu():
   return SendCommand(RPCString("Input.ContextMenu"))
