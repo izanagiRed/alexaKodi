@@ -254,6 +254,13 @@ def alexa_up(slots):
   kodi.Up()
   return build_alexa_response('')
   
+def alexa_showinfo(slots):
+  print('Going up')
+  sys.stdout.flush()
+
+  kodi.showinfo()
+  return build_alexa_response('')
+  
 def alexa_down(slots):
   print('Going down')
   sys.stdout.flush()
@@ -599,6 +606,7 @@ INTENTS = [
   ['UpdateVideo', alexa_update_video],
   ['CleanAudio', alexa_clean_audio],
   ['UpdateAudio', alexa_update_audio],
+  ['showInfo', alexa_showinfo],
   ['PlayLatestEpisode', alexa_play_newest_episode]
 ]
 
