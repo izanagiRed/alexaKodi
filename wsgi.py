@@ -232,29 +232,7 @@ def alexa_select(slots):
 
   kodi.Select()
   return build_alexa_response('')
- 
- def alexa_info(slots):
-  print('Selecting')
-  sys.stdout.flush()
-
-  kodi.Info()
-  return build_alexa_response('') 
-  
-def alexa_display_info(slots):
-  print('display info')
-  sys.stdout.flush()
-
-  kodi.DisplayInfo()
-  return build_alexa_response('')
-
-def alexa_mark_watch(slots):
-  print('marking as watch')
-  sys.stdout.flush()
-
-  kodi.MarkWatch()
-  return build_alexa_response('')
-
-    
+     
 def alexa_left(slots):
   print('Going left')
   sys.stdout.flush()
@@ -621,9 +599,6 @@ INTENTS = [
   ['UpdateVideo', alexa_update_video],
   ['CleanAudio', alexa_clean_audio],
   ['UpdateAudio', alexa_update_audio],
-  ['Info', alexa_info],
-  ['DisplayInfo', alexa_display_info],
-  ['MarkWatch', alexa_mark_watch],
   ['PlayLatestEpisode', alexa_play_newest_episode]
 ]
 
