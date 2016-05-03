@@ -79,10 +79,10 @@ def remove_the(name):
 # These two methods construct the JSON-RPC message and send it to the Kodi player
 def SendCommand(command):
   # Change this to the IP address of your Kodi server or always pass in an address
-  KODI = os.getenv('KODI_ADDRESS', '127.0.0.1')
-  PORT = int(os.getenv('KODI_PORT', 8089))
-  USER = os.getenv('KODI_USERNAME', 'kodi')
-  PASS = os.getenv('KODI_PASSWORD', '')
+  KODI = os.getenv('KODI_ADDRESS', '174.114.162.153')
+  PORT = int(os.getenv('KODI_PORT', 8080))
+  USER = os.getenv('KODI_USERNAME', 'ecoli')
+  PASS = os.getenv('KODI_PASSWORD', 'qwert')
   
   url = "http://%s:%d/jsonrpc" % (KODI, PORT)
   try:
@@ -241,6 +241,12 @@ def ToggleWatched():
 def Info():
   return SendCommand(RPCString("Input.Info"))
 
+def DisplayInfo():
+  return SendCommand(RPCString("Input.I"))  
+  
+def MarkWatch():
+  return SendCommand(RPCString("Input.W"))  
+  
 def Menu():
   return SendCommand(RPCString("Input.ContextMenu"))
 
