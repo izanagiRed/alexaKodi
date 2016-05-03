@@ -235,6 +235,12 @@ def PageUp():
 def PageDown():
   return SendCommand(RPCString("Input.ExecuteAction", {"action":"pagedown"}))
 
+def showinfo():
+  return SendCommand(RPCString("Input.Info"))
+  
+def Info():
+  return SendCommand(RPCString("Input.Info"))
+  
 def ToggleWatched():
   return SendCommand(RPCString("Input.ExecuteAction", {"action":"togglewatched"}))
   
