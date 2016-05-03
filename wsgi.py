@@ -255,7 +255,7 @@ def alexa_up(slots):
   return build_alexa_response('')
   
 def alexa_showinfo(slots):
-  print('Going up')
+  print('show info')
   sys.stdout.flush()
 
   kodi.showinfo()
